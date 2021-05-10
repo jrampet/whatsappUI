@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06F5C4EC264956F6002033C5 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5C4EB264956F6002033C5 /* DataFile.swift */; };
 		9FAF0B992643B45E0020CC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF0B982643B45E0020CC1F /* AppDelegate.swift */; };
 		9FAF0B9B2643B45E0020CC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF0B9A2643B45E0020CC1F /* SceneDelegate.swift */; };
 		9FAF0B9D2643B45E0020CC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF0B9C2643B45E0020CC1F /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06F5C4EB264956F6002033C5 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
 		9FAF0B952643B45E0020CC1F /* whatsappUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsappUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAF0B982643B45E0020CC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FAF0B9A2643B45E0020CC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				9FAF0BA62643B4600020CC1F /* Info.plist */,
 				9FAF0BB12643B5580020CC1F /* TableViewCell.swift */,
 				9FAF0BB22643B5580020CC1F /* TableViewCell.xib */,
+				06F5C4EB264956F6002033C5 /* DataFile.swift */,
 			);
 			path = whatsappUI;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			files = (
 				9FAF0BCC2645656F0020CC1F /* StackViewController.swift in Sources */,
 				9FAF0B9D2643B45E0020CC1F /* ViewController.swift in Sources */,
+				06F5C4EC264956F6002033C5 /* DataFile.swift in Sources */,
 				9FAF0BB32643B5580020CC1F /* TableViewCell.swift in Sources */,
 				9FAF0BD62645678C0020CC1F /* stackViewCell.swift in Sources */,
 				9FAF0B992643B45E0020CC1F /* AppDelegate.swift in Sources */,

@@ -41,30 +41,18 @@ extension stalkViewController : UITableViewDataSource{
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCell(withIdentifier: "stackCell", for: indexPath) as! stackViewCell
-        switch indexPath.row{
-        case 0:
-            customCell.configure("Rajesh", with: "Good Morning Dude", at: "9:34 AM", dp: "user-original", msgStatus: "double-tick")
-            
-        case 1:
-            customCell.configure("Bala", with: "What's up? bro", at: "9:36 AM", dp: "bala", msgStatus: "single-tick")
-          
-        case 2:
-            customCell.configure("Saajudeen", with: "I updated for you", at: "10:32 AM", dp: "saaj", msgStatus: nil)
-        
-        case 3:
-            customCell.configure("Abhilash", with: "Yeah I am fine", at: "11:44 AM", dp: "abbas", msgStatus: "double-tick")
-          
-        default:
-            customCell.configure("Rajesh", with: "Have you completed?", at: "12:34 PM", dp: "user-original", msgStatus: nil)
-            
-            
-        }
+        let dataInstance = ShowData()
+        let viewData = dataInstance.getData()
+
+        customCell.configure(viewData[indexPath.row].name, with: viewData[indexPath.row].msg, at: viewData[indexPath.row].time, dp: viewData[indexPath.row].image, msgStatus: viewData[indexPath.row].msgStatus)
+
         return customCell
+       
         
     }
     
