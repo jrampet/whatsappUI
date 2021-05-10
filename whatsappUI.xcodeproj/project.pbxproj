@@ -15,7 +15,7 @@
 		9FAF0BA52643B4600020CC1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAF0BA32643B4600020CC1F /* LaunchScreen.storyboard */; };
 		9FAF0BB32643B5580020CC1F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF0BB12643B5580020CC1F /* TableViewCell.swift */; };
 		9FAF0BB42643B5580020CC1F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAF0BB22643B5580020CC1F /* TableViewCell.xib */; };
-		9FAF0BCC2645656F0020CC1F /* stalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF0BCA2645656F0020CC1F /* stalkViewController.swift */; };
+		9FAF0BCC2645656F0020CC1F /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF0BCA2645656F0020CC1F /* StackViewController.swift */; };
 		9FAF0BCD2645656F0020CC1F /* stalkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAF0BCB2645656F0020CC1F /* stalkViewController.xib */; };
 		9FAF0BD62645678C0020CC1F /* stackViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF0BD42645678C0020CC1F /* stackViewCell.swift */; };
 		9FAF0BD72645678C0020CC1F /* stackViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAF0BD52645678C0020CC1F /* stackViewCell.xib */; };
@@ -32,7 +32,7 @@
 		9FAF0BA62643B4600020CC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FAF0BB12643B5580020CC1F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9FAF0BB22643B5580020CC1F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		9FAF0BCA2645656F0020CC1F /* stalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stalkViewController.swift; sourceTree = "<group>"; };
+		9FAF0BCA2645656F0020CC1F /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		9FAF0BCB2645656F0020CC1F /* stalkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = stalkViewController.xib; sourceTree = "<group>"; };
 		9FAF0BD42645678C0020CC1F /* stackViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stackViewCell.swift; sourceTree = "<group>"; };
 		9FAF0BD52645678C0020CC1F /* stackViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = stackViewCell.xib; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				9FAF0B982643B45E0020CC1F /* AppDelegate.swift */,
 				9FAF0B9A2643B45E0020CC1F /* SceneDelegate.swift */,
 				9FAF0B9C2643B45E0020CC1F /* ViewController.swift */,
-				9FAF0BCA2645656F0020CC1F /* stalkViewController.swift */,
+				9FAF0BCA2645656F0020CC1F /* StackViewController.swift */,
 				9FAF0BD42645678C0020CC1F /* stackViewCell.swift */,
 				9FAF0BD52645678C0020CC1F /* stackViewCell.xib */,
 				9FAF0BCB2645656F0020CC1F /* stalkViewController.xib */,
@@ -158,7 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FAF0BCC2645656F0020CC1F /* stalkViewController.swift in Sources */,
+				9FAF0BCC2645656F0020CC1F /* StackViewController.swift in Sources */,
 				9FAF0B9D2643B45E0020CC1F /* ViewController.swift in Sources */,
 				9FAF0BB32643B5580020CC1F /* TableViewCell.swift in Sources */,
 				9FAF0BD62645678C0020CC1F /* stackViewCell.swift in Sources */,

@@ -45,26 +45,26 @@ extension stalkViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let customCell = tableView.dequeueReusableCell(withIdentifier: "stackCell", for: indexPath) as! stackViewCell
         switch indexPath.row{
-        case 0: let customCell = tableView.dequeueReusableCell(withIdentifier: "stackCell", for: indexPath) as! stackViewCell
+        case 0:
             customCell.configure("Rajesh", with: "Good Morning Dude", at: "9:34 AM", dp: "user-original", msgStatus: "double-tick")
-            return customCell
-        case 1: let customCell = tableView.dequeueReusableCell(withIdentifier: "stackCell", for: indexPath) as! stackViewCell
+            
+        case 1:
             customCell.configure("Bala", with: "What's up? bro", at: "9:36 AM", dp: "bala", msgStatus: "single-tick")
-            return customCell
-        case 2: let customCell = tableView.dequeueReusableCell(withIdentifier: "stackCell", for: indexPath) as! stackViewCell
+          
+        case 2:
             customCell.configure("Saajudeen", with: "I updated for you", at: "10:32 AM", dp: "saaj", msgStatus: nil)
-            return customCell
-        case 3: let customCell = tableView.dequeueReusableCell(withIdentifier: "stackCell", for: indexPath) as! stackViewCell
+        
+        case 3:
             customCell.configure("Abhilash", with: "Yeah I am fine", at: "11:44 AM", dp: "abbas", msgStatus: "double-tick")
-            return customCell
-        default: let customCell = tableView.dequeueReusableCell(withIdentifier: "stackCell", for: indexPath) as! stackViewCell
+          
+        default:
             customCell.configure("Rajesh", with: "Have you completed?", at: "12:34 PM", dp: "user-original", msgStatus: nil)
-            return customCell
+            
             
         }
-        
+        return customCell
         
     }
     

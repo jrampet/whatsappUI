@@ -28,7 +28,8 @@ extension ViewController : UITableViewDelegate{
         let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
         
         print(cell.NameOfPerson.text!)
-        let rootVc = stalkViewController()
+//        let rootVc = stalkViewController()
+        let rootVc = stalkViewController(nibName: "stalkViewController", bundle: nil)
         rootVc.title = "\(cell.NameOfPerson.text!)"
         
         guard let navigationVC = self.navigationController else { print("sdf"); return }
@@ -49,26 +50,26 @@ extension ViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let customCell = tableView.dequeueReusableCell(withIdentifier: "customList", for: indexPath) as! TableViewCell
         switch indexPath.row{
-        case 0: let customCell = tableView.dequeueReusableCell(withIdentifier: "customList", for: indexPath) as! TableViewCell
+        case 0:
             customCell.configure("Rajesh", with: "Good Morning Dude", at: "9:34 AM", dp: "user-original", msgStatus: "double-tick")
-            return customCell
-        case 1: let customCell = tableView.dequeueReusableCell(withIdentifier: "customList", for: indexPath) as! TableViewCell
+            
+        case 1:
             customCell.configure("Bala", with: "What's up? bro", at: "9:36 AM", dp: "bala", msgStatus: "single-tick")
-            return customCell
-        case 2: let customCell = tableView.dequeueReusableCell(withIdentifier: "customList", for: indexPath) as! TableViewCell
+           
+        case 2:
             customCell.configure("Saajudeen", with: "I updated for you", at: "10:32 AM", dp: "saaj", msgStatus: nil)
-            return customCell
-        case 3: let customCell = tableView.dequeueReusableCell(withIdentifier: "customList", for: indexPath) as! TableViewCell
+           
+        case 3:
             customCell.configure("Abhilash", with: "Yeah I am fine", at: "11:44 AM", dp: "abbas", msgStatus: "double-tick")
-            return customCell
-        default: let customCell = tableView.dequeueReusableCell(withIdentifier: "customList", for: indexPath) as! TableViewCell
+           
+        default:
             customCell.configure("Rajesh", with: "Have you completed?", at: "12:34 PM", dp: "user-original", msgStatus: nil)
-            return customCell
+            
             
         }
-        
+        return customCell
         
     }
     
