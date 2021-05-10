@@ -10,12 +10,14 @@ import UIKit
 class stalkViewController: UIViewController {
     
     @IBOutlet var stackView : UITableView!
-    
+    let dataInstance = ShowData()
+    var viewData : [data] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.stackView.register(UINib.init(nibName: "stackViewCell", bundle: nil), forCellReuseIdentifier: "stackCell")
         stackView.delegate = self
         stackView.dataSource = self
+        viewData = dataInstance.getData()
         // Do any additional setup after loading the view.
     }
 
@@ -46,10 +48,10 @@ extension stalkViewController : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCell(withIdentifier: "stackCell", for: indexPath) as! stackViewCell
-        let dataInstance = ShowData()
-        let viewData = dataInstance.getData()
+        
 
-        customCell.configure(viewData[indexPath.row].name, with: viewData[indexPath.row].msg, at: viewData[indexPath.row].time, dp: viewData[indexPath.row].image, msgStatus: viewData[indexPath.row].msgStatus)
+        let cellAtIndex = viewData[indexPath.row]
+        customCell.configure(cellAtIndex.name, with: cellAtIndex.msg, at: cellAtIndex.time, dp: cellAtIndex.image, msgStatus: cellAtIndex.msgStatus)
 
         return customCell
        

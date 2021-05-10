@@ -10,14 +10,16 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var tableView : UITableView!
-   
+    let dataInstance = ShowData()
+    var viewData : [data] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Chats"
         // Do any additional setup after loading the view.
         self.tableView.register(UINib.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "customList")
         tableView.delegate = self
-        tableView.dataSource = self        
+        tableView.dataSource = self
+         viewData = dataInstance.getData()
     }
     
    
@@ -49,10 +51,10 @@ extension ViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dataInstance = ShowData()
-        let viewData = dataInstance.getData()
+        
         let customCell = tableView.dequeueReusableCell(withIdentifier: "customList", for: indexPath) as! TableViewCell
-        customCell.configure(viewData[indexPath.row].name, with: viewData[indexPath.row].msg, at: viewData[indexPath.row].time, dp: viewData[indexPath.row].image, msgStatus: viewData[indexPath.row].msgStatus)
+        let cellAtIndex = viewData[indexPath.row]
+        customCell.configure(cellAtIndex.name, with: cellAtIndex.msg, at: cellAtIndex.time, dp: cellAtIndex.image, msgStatus: cellAtIndex.msgStatus)
 
         return customCell
         
